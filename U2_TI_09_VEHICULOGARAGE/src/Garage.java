@@ -16,13 +16,16 @@ public class Garage {
     }
     public boolean retirar(String placa) {
         for (int i = 0; i < espacios.length; i++) {
+
             if (espacios[i] != null && espacios[i].getPlaca().equals(placa)) {
+
                 espacios[i] = null;
                 return true;
             }
         }
         return false;
     }
+
     public int contarVehiculos() {
         int contador = 0;
         for (Vehiculo v : espacios) {
